@@ -8,6 +8,20 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 lg:px-8">
       <div className="max-w-6xl mx-auto text-center">
+        {/* AWA Logo */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="mb-12"
+        >
+          <img 
+            src="/images/Awa-logo-no-background.png" 
+            alt="AWA Finance Logo" 
+            className="mx-auto h-32 md:h-40 lg:h-48 w-auto"
+          />
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -33,7 +47,7 @@ export default function HeroSection() {
           One integration. Endless possibilities.{" "}
           <span className="text-[#ff6900] font-medium">Think Plaid for DeFi.</span>
           <br />
-          Connect, transact, and scale with the most comprehensive DeFi infrastructure.
+          Swap, trade, save, borrow, and scale with the best API for DeFi infrastructure.
         </motion.p>
 
         <motion.div
@@ -54,10 +68,9 @@ export default function HeroSection() {
           <Button 
             size="lg" 
             variant="outline"
-            className="border-2 border-white/20 text-white hover:bg-white/10 hover:border-white/40 px-8 py-4 rounded-full font-semibold backdrop-blur-sm transition-all duration-300"
+            className="border-2 border-[#ff6900] text-[#ff6900] hover:bg-[#ff6900] hover:text-white hover:border-[#ff6900] px-8 py-4 rounded-full font-semibold backdrop-blur-sm transition-all duration-300"
           >
-            <Play className="mr-2 w-5 h-5" />
-            Explore Products
+            Get in touch
           </Button>
         </motion.div>
 

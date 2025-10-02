@@ -28,16 +28,15 @@ export default function NavigationHeader({ isScrolled }) {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 30 }}
           >
-            <div className="w-10 h-10 bg-gradient-to-r from-[#ff6900] to-[#ef8123] rounded-lg flex items-center justify-center mr-3">
-              <span className="text-white font-bold text-xl">A</span>
-            </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-              AWA Finance
-            </span>
+            <img 
+              src="/images/Awa-logo-no-background.png" 
+              alt="AWA Finance Logo" 
+              className="h-12 w-auto"
+            />
           </motion.div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          {/* Desktop Navigation - Centered */}
+          <nav className="hidden lg:flex items-center justify-center space-x-8 flex-1">
             {navItems.map((item) => (
               <motion.a
                 key={item}
@@ -49,13 +48,17 @@ export default function NavigationHeader({ isScrolled }) {
                 {item}
               </motion.a>
             ))}
+          </nav>
+
+          {/* View Docs Button - Right Side */}
+          <div className="hidden lg:flex">
             <Button
               className="bg-gradient-to-r from-[#ff6900] to-[#ef8123] hover:from-[#ef8123] hover:to-[#ff6900] text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
               onClick={() => window.open('https://docs.awafinance.com', '_blank')}
             >
               View Docs
             </Button>
-          </nav>
+          </div>
 
           {/* Mobile Menu Button */}
           <button

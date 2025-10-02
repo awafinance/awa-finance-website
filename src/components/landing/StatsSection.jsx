@@ -39,9 +39,9 @@ export default function StatsSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const stats = [
-    { value: 2500000000, suffix: "+", prefix: "$", label: "Total Value Locked" },
-    { value: 850000, suffix: "+", label: "Active Users" },
-    { value: 45, suffix: "+", label: "Partner Protocols" },
+    { value: 25000000, suffix: "+", prefix: "$", label: "Transacted volume" },
+    { value: 20, suffix: "+", label: "Blockchain Networks" },
+    { value: 12, suffix: "+", label: "Partner Protocols" },
     { value: 99.9, suffix: "%", label: "Uptime" }
   ];
 

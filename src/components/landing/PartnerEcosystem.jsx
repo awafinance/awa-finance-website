@@ -1,26 +1,28 @@
 import React from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
 export default function PartnerEcosystem() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-200px" });
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
 
   const partners = [
-    { name: "Ethereum", size: 60, color: "#ff6900" },
-    { name: "Polygon", size: 50, color: "#ef8123" },
-    { name: "Arbitrum", size: 45, color: "#bf6037" },
-    { name: "Optimism", size: 65, color: "#903939" },
-    { name: "Avalanche", size: 55, color: "#591737" },
-    { name: "Solana", size: 70, color: "#4f185a" },
-    { name: "Chainlink", size: 50, color: "#b38a94" },
-    { name: "Uniswap", size: 60, color: "#ff6900" },
-    { name: "AAVE", size: 40, color: "#ef8123" },
-    { name: "MakerDAO", size: 65, color: "#903939" },
-    { name: "Curve", size: 55, color: "#bf6037" },
-    { name: "1inch", size: 45, color: "#591737" },
-    { name: "SushiSwap", size: 50, color: "#ef8123"},
-    { name: "Balancer", size: 60, color: "#ff6900"}
+    { name: "AAVE", logo: "/images/aave.png", size: 120 },
+    { name: "Balancer", logo: "/images/balancer.png", size: 112 },
+    { name: "Compound", logo: "/images/compound.svg", size: 105 },
+    { name: "CowSwap", logo: "/images/cowswap.png", size: 112 },
+    { name: "Curve", logo: "/images/curve.svg", size: 120 },
+    { name: "DeBridge", logo: "/images/debridge.png", size: 112 },
+    { name: "Maker", logo: "/images/maker.svg", size: 128 },
+    { name: "Morpho", logo: "/images/morpho.png", size: 105 },
+    { name: "sDAI", logo: "/images/sDAI.png", size: 112 },
+    { name: "Uniswap", logo: "/images/uniswap.png", size: 135 },
+    { name: "USDC", logo: "/images/usdc.png", size: 105 },
+    { name: "Yearn", logo: "/images/yearn.png", size: 112 }
   ];
 
   return (
@@ -37,55 +39,74 @@ export default function PartnerEcosystem() {
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-              Powered by AWA
+              Connected by Awa
             </span>
           </h2>
           <p className="text-xl text-gray-400 max-w-xl mx-auto leading-relaxed">
-            Enterprises connect with AWA to power any lending or borrowing use case at scale.
+            Connect to all relevant protocols with a single API, no hassle, just simple integration.
           </p>
         </motion.div>
 
-        {/* Floating Partner "Logos" */}
+        {/* Floating Partner Logos */}
         <div className="absolute inset-0 w-full h-full z-0">
           {partners.map((partner, index) => {
-            const duration = 25 + Math.random() * 20; // 25-45 seconds for a full orbit
-            const radiusX = (30 + Math.random() * 20) * (Math.random() > 0.5 ? 1 : -1); // 30-50% of width
-            const radiusY = (25 + Math.random() * 20) * (Math.random() > 0.5 ? 1 : -1); // 25-45% of height
-            const startAngle = Math.random() * 2 * Math.PI;
+            // Create a circular arrangement around the center
+            const angle = (index / partners.length) * 2 * Math.PI;
+            const baseRadius = 250; // Base distance from center in pixels
+            
+            // INVERTED: Use scroll progress to animate convergence toward center
+            const x = useTransform(scrollYProgress, [0, 0.5, 1], [
+              Math.cos(angle) * (baseRadius * 2.2), // Start far from center
+              Math.cos(angle) * (baseRadius * 1.5), // Move closer
+              Math.cos(angle) * baseRadius          // End at comfortable distance
+            ]);
+            
+            const y = useTransform(scrollYProgress, [0, 0.5, 1], [
+              Math.sin(angle) * (baseRadius * 2.2),
+              Math.sin(angle) * (baseRadius * 1.5),
+              Math.sin(angle) * baseRadius
+            ]);
 
             return (
               <motion.div
-                key={partner.name + index}
-                className="absolute top-1/2 left-1/2 flex items-center justify-center rounded-full shadow-lg text-white font-bold text-xl"
+                key={partner.name}
+                className="absolute top-1/2 left-1/2 flex items-center justify-center rounded-full shadow-lg backdrop-blur-sm bg-white/10 border border-white/20 p-3"
                 style={{
                   width: partner.size,
                   height: partner.size,
-                  backgroundColor: partner.color,
+                  x: x,
+                  y: y,
+                  translateX: '-50%',
+                  translateY: '-50%'
                 }}
                 initial={{
-                  x: '-50%',
-                  y: '-50%',
                   opacity: 0,
                   scale: 0.5,
                 }}
                 animate={isInView ? {
-                  opacity: [0, 0.7, 0.7, 0],
-                  transform: [
-                    `translate3d(${Math.cos(startAngle) * radiusX}vw, ${Math.sin(startAngle) * radiusY}vh, 0px) scale(0.7)`,
-                    `translate3d(${Math.cos(startAngle + Math.PI/2) * radiusX}vw, ${Math.sin(startAngle + Math.PI/2) * radiusY}vh, 0px) scale(1)`,
-                    `translate3d(${Math.cos(startAngle + Math.PI) * radiusX}vw, ${Math.sin(startAngle + Math.PI) * radiusY}vh, 0px) scale(0.7)`,
-                    `translate3d(${Math.cos(startAngle + 3*Math.PI/2) * radiusX}vw, ${Math.sin(startAngle + 3*Math.PI/2) * radiusY}vh, 0px) scale(0.5)`,
-                    `translate3d(${Math.cos(startAngle + 2*Math.PI) * radiusX}vw, ${Math.sin(startAngle + 2*Math.PI) * radiusY}vh, 0px) scale(0.7)`,
-                  ]
+                  opacity: 0.8,
+                  scale: 1,
+                  rotate: [0, 5, -5, 0], // Gentle floating rotation
                 } : {}}
                 transition={{
-                  duration: duration,
-                  ease: "linear",
-                  repeat: Infinity,
-                  delay: index * 0.5
+                  duration: 1.5,
+                  delay: index * 0.1,
+                  rotate: {
+                    duration: 6 + index * 0.5,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }
+                }}
+                whileHover={{
+                  scale: 1.1,
+                  opacity: 1
                 }}
               >
-                {partner.name[0]}
+                <img 
+                  src={partner.logo} 
+                  alt={`${partner.name} logo`}
+                  className="w-3/4 h-3/4 object-contain"
+                />
               </motion.div>
             );
           })}
