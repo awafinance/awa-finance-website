@@ -11,7 +11,7 @@ export default function AboutSection() {
 
   const isHeaderInView = useInView(headerRef, { once: true, margin: "-100px" });
   const isProblemInView = useInView(problemRef, { once: true, margin: "-100px" });
-  const isSolutionInView = useInView(solutionRef, { once: true, margin: "-200px", amount: 0.3 });
+  const isSolutionInView = useInView(solutionRef, { once: true, margin: "-50px", amount: 0.2 });
 
   return (
     <section id="about" className="py-20 px-6 lg:px-8 relative">
