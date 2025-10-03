@@ -20,8 +20,9 @@ export default function ParticleBackground() {
     // Color palette
     const accentColors = ["#ef8123", "#ff6900", "#210921", "#903939", "#4f185a", "#591737", "#b38a94", "#bf6037", "#e5dcd6"];
     
-    // Particles
-    const count = 800;
+    // Particles - Reduce count on mobile for performance
+    const isMobile = window.innerWidth < 768;
+    const count = isMobile ? 400 : 800;
     const positions = new Float32Array(count * 3);
     const colors = new Float32Array(count * 3);
     
@@ -52,9 +53,9 @@ export default function ParticleBackground() {
     geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
     
     const material = new THREE.PointsMaterial({
-      size: 0.15,
+      size: isMobile ? 0.12 : 0.15, // Smaller particles on mobile
       transparent: true,
-      opacity: 0.8,
+      opacity: isMobile ? 0.7 : 0.8, // Slightly less opacity on mobile
       blending: THREE.AdditiveBlending,
       vertexColors: true // Enable per-vertex colors
     });

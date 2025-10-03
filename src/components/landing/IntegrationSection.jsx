@@ -85,42 +85,42 @@ try {
           </motion.div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-end">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-32 items-end">
           {/* Left Side - Phone Mockup */}
           <motion.div
-            className="relative"
+            className="relative order-2 lg:order-1"
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="relative max-w-sm mx-auto">
+            <div className="relative max-w-[280px] sm:max-w-sm mx-auto">
               {/* iPhone Frame */}
-              <div className="relative bg-gray-900 rounded-[3rem] p-3 shadow-2xl shadow-orange-500/20 border-4 border-gray-800">
+              <div className="relative bg-gray-900 rounded-[2.5rem] sm:rounded-[3rem] p-2 sm:p-3 shadow-2xl shadow-orange-500/20 border-2 sm:border-4 border-gray-800">
                 {/* Notch */}
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-40 h-7 bg-gray-900 rounded-b-3xl z-10"></div>
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 sm:w-40 h-5 sm:h-7 bg-gray-900 rounded-b-2xl sm:rounded-b-3xl z-10"></div>
                 
                 {/* Screen */}
-                <div className="bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d] rounded-[2.5rem] overflow-hidden">
+                <div className="bg-gradient-to-br from-[#1a1a1a] to-[#2d2d2d] rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden">
                   {/* Status Bar */}
-                  <div className="flex items-center justify-between px-8 pt-4 pb-2 text-white text-xs">
+                  <div className="flex items-center justify-between px-4 sm:px-8 pt-3 sm:pt-4 pb-1 sm:pb-2 text-white text-[10px] sm:text-xs">
                     <span className="font-semibold">9:41</span>
                     <div className="flex items-center gap-1">
-                      <div className="w-4 h-3 border border-white rounded-sm"></div>
-                      <div className="w-1 h-3 bg-white rounded-sm"></div>
+                      <div className="w-3 h-2 sm:w-4 sm:h-3 border border-white rounded-sm"></div>
+                      <div className="w-0.5 h-2 sm:w-1 sm:h-3 bg-white rounded-sm"></div>
                     </div>
                   </div>
 
                   {/* Lock Screen Content */}
-                  <div className="px-6 py-8">
+                  <div className="px-4 sm:px-6 py-6 sm:py-8">
                     {/* Date */}
                     <motion.div
-                      className="text-center mb-12"
+                      className="text-center mb-8 sm:mb-12"
                       initial={{ opacity: 0, y: 20 }}
                       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                       transition={{ duration: 0.6, delay: 0.3 }}
                     >
-                      <p className="text-white/80 text-sm mb-2">Sunday, October 1</p>
-                      <p className="text-white text-7xl font-light tracking-tight">9:41</p>
+                      <p className="text-white/80 text-xs sm:text-sm mb-1 sm:mb-2">Sunday, October 1</p>
+                      <p className="text-white text-5xl sm:text-7xl font-light tracking-tight">9:41</p>
                     </motion.div>
 
                     {/* Notification Card */}
@@ -128,24 +128,24 @@ try {
                       initial={{ opacity: 0, y: 30 }}
                       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                       transition={{ duration: 0.6, delay: 0.5 }}
-                      className="bg-white/90 backdrop-blur-xl rounded-2xl p-4 shadow-xl"
+                      className="bg-white/90 backdrop-blur-xl rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-xl"
                     >
-                      <div className="flex items-start gap-3">
+                      <div className="flex items-start gap-2 sm:gap-3">
                         {/* App Icon */}
-                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#ff6900] to-[#ef8123] flex items-center justify-center flex-shrink-0">
-                          <span className="text-white text-lg font-bold">A</span>
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-md sm:rounded-lg bg-gradient-to-br from-[#ff6900] to-[#ef8123] flex items-center justify-center flex-shrink-0">
+                          <span className="text-white text-base sm:text-lg font-bold">A</span>
                         </div>
 
                         {/* Notification Content */}
                         <div className="flex-1 min-w-0">
-                          <div className="flex items-center justify-between mb-1">
-                            <span className="text-gray-900 font-semibold text-sm">Your App</span>
-                            <span className="text-gray-500 text-xs">now</span>
+                          <div className="flex items-center justify-between mb-0.5 sm:mb-1">
+                            <span className="text-gray-900 font-semibold text-xs sm:text-sm">Your App</span>
+                            <span className="text-gray-500 text-[10px] sm:text-xs">now</span>
                           </div>
-                          <p className="text-gray-900 font-medium text-base mb-1">
+                          <p className="text-gray-900 font-medium text-sm sm:text-base mb-0.5 sm:mb-1">
                             Yield Earned
                           </p>
-                          <p className="text-gray-600 text-sm">
+                          <p className="text-gray-600 text-xs sm:text-sm">
                             +$42.50 USDC at 5% APY
                           </p>
                         </div>
@@ -159,6 +159,7 @@ try {
 
           {/* Right Side - Code Block */}
           <motion.div
+            className="order-1 lg:order-2"
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -171,7 +172,7 @@ try {
               className="relative"
             >
               {/* Code Header */}
-              <div className="flex items-center justify-between bg-gray-800/50 backdrop-blur-md border border-white/10 rounded-t-xl px-4 py-3">
+              <div className="flex items-center justify-between bg-gray-800/50 backdrop-blur-md border border-white/10 rounded-t-xl px-3 sm:px-4 py-2 sm:py-3">
                 <div className="flex items-center gap-2">
                   <div className="flex gap-1.5">
                     <div className="w-3 h-3 rounded-full bg-red-500"></div>
@@ -199,8 +200,8 @@ try {
               </div>
 
               {/* Code Content */}
-              <div className="bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-md border-x border-b border-white/10 rounded-b-xl p-6 overflow-x-auto">
-                <pre className="text-sm font-mono">
+              <div className="bg-gradient-to-br from-gray-900/90 to-gray-800/90 backdrop-blur-md border-x border-b border-white/10 rounded-b-xl p-3 sm:p-4 md:p-6 overflow-x-auto">
+                <pre className="text-xs sm:text-sm font-mono">
                   <code className="text-gray-300">
                     <span className="text-purple-400">const</span> <span className="text-blue-300">url</span> <span className="text-gray-500">=</span> <span className="text-green-400">'https://api.awafinance.com/savings/deposit/quote'</span><span className="text-gray-500">;</span>
                     {'\n'}

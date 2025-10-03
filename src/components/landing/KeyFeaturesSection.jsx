@@ -62,7 +62,7 @@ export default function KeyFeaturesSection() {
         {/* Features - Vertical List Style */}
         <motion.div
           ref={ref}
-          className="space-y-6 max-w-5xl mx-auto"
+          className="space-y-4 sm:space-y-6 max-w-5xl mx-auto"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.8 }}
@@ -75,39 +75,39 @@ export default function KeyFeaturesSection() {
               transition={{ duration: 0.6, delay: index * 0.15 }}
               className="group"
             >
-              <div className="relative bg-gradient-to-r from-white/5 to-transparent border-l-4 border-[#ff6900] hover:border-[#ef8123] transition-all duration-300 rounded-r-xl overflow-hidden">
+              <div className="relative bg-gradient-to-r from-white/5 to-transparent border-l-2 sm:border-l-4 border-[#ff6900] hover:border-[#ef8123] transition-all duration-300 rounded-r-lg sm:rounded-r-xl overflow-hidden">
                 {/* Hover effect background */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#ff6900]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
-                <div className="relative p-8 md:p-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+                <div className="relative p-5 sm:p-8 md:p-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 sm:gap-6">
                   {/* Left side - Icon and Content */}
-                  <div className="flex items-start gap-6 flex-1">
+                  <div className="flex items-start gap-4 sm:gap-6 flex-1">
                     {/* Icon */}
                     <div className="flex-shrink-0">
-                      <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#ff6900]/20 to-[#ef8123]/10 border border-[#ff6900]/30 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                        <feature.icon className="w-8 h-8 text-[#ff6900]" />
+                      <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-lg sm:rounded-xl bg-gradient-to-br from-[#ff6900]/20 to-[#ef8123]/10 border border-[#ff6900]/30 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                        <feature.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-[#ff6900]" />
                       </div>
                     </div>
 
                     {/* Content */}
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:text-[#ff6900] transition-colors duration-300">
+                      <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 sm:mb-3 group-hover:text-[#ff6900] transition-colors duration-300">
                         {feature.title}
                       </h3>
-                      <p className="text-gray-400 text-base md:text-lg leading-relaxed">
+                      <p className="text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed">
                         {feature.description}
                       </p>
                     </div>
                   </div>
 
                   {/* Right side - Stats Badge */}
-                  <div className="flex items-center gap-4 lg:flex-shrink-0">
-                    <div className="px-6 py-3 bg-[#ff6900]/10 border border-[#ff6900]/30 rounded-full">
-                      <span className="text-[#ff6900] font-bold text-sm md:text-base whitespace-nowrap">
+                  <div className="flex items-center gap-3 sm:gap-4 lg:flex-shrink-0 ml-16 sm:ml-0">
+                    <div className="px-4 py-2 sm:px-6 sm:py-3 bg-[#ff6900]/10 border border-[#ff6900]/30 rounded-full">
+                      <span className="text-[#ff6900] font-bold text-xs sm:text-sm md:text-base whitespace-nowrap">
                         {feature.stats}
                       </span>
                     </div>
-                    <ArrowRight className="w-5 h-5 text-gray-600 group-hover:text-[#ff6900] group-hover:translate-x-2 transition-all duration-300 hidden lg:block" />
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600 group-hover:text-[#ff6900] group-hover:translate-x-2 transition-all duration-300 hidden lg:block" />
                   </div>
                 </div>
               </div>

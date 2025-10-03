@@ -114,24 +114,24 @@ export default function CustodySection() {
                     onClick={() => toggleItem(option.id)}
                     className="w-full text-left relative z-10"
                   >
-                    <div className="flex items-center justify-between p-6 md:p-8">
-                      <div className="flex items-center gap-6 flex-1">
+                    <div className="flex items-center justify-between p-4 sm:p-6 md:p-8">
+                      <div className="flex items-center gap-3 sm:gap-4 md:gap-6 flex-1">
                         {/* Icon */}
-                        <div className={`w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-r ${option.iconBg} flex items-center justify-center flex-shrink-0 shadow-lg transition-transform duration-300 ${
+                        <div className={`w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-xl sm:rounded-2xl bg-gradient-to-r ${option.iconBg} flex items-center justify-center flex-shrink-0 shadow-lg transition-transform duration-300 ${
                           !isExpanded ? 'hover:scale-105' : ''
                         }`}>
-                          <Icon className="w-8 h-8 md:w-10 md:h-10 text-white" />
+                          <Icon className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-white" />
                         </div>
 
                         {/* Title and Description */}
                         <div className="flex-1 min-w-0">
-                          <h3 className={`font-bold mb-2 transition-colors duration-300 ${
-                            isExpanded ? 'text-white text-2xl md:text-3xl' : 'text-gray-200 text-xl md:text-2xl'
+                          <h3 className={`font-bold mb-1 sm:mb-2 transition-colors duration-300 ${
+                            isExpanded ? 'text-white text-lg sm:text-2xl md:text-3xl' : 'text-gray-200 text-base sm:text-xl md:text-2xl'
                           }`}>
                             {option.title}
                           </h3>
                           <p className={`text-gray-400 leading-relaxed transition-all duration-300 ${
-                            isExpanded ? 'text-base md:text-lg' : 'text-sm md:text-base'
+                            isExpanded ? 'text-sm sm:text-base md:text-lg' : 'text-xs sm:text-sm md:text-base'
                           }`}>
                             {option.description}
                           </p>
@@ -142,9 +142,9 @@ export default function CustodySection() {
                       <motion.div
                         animate={{ rotate: isExpanded ? 180 : 0 }}
                         transition={{ duration: 0.3 }}
-                        className="flex-shrink-0 ml-4"
+                        className="flex-shrink-0 ml-2 sm:ml-4"
                       >
-                        <ChevronDown className={`w-6 h-6 transition-colors duration-300 ${
+                        <ChevronDown className={`w-5 h-5 sm:w-6 sm:h-6 transition-colors duration-300 ${
                           isExpanded ? 'text-white' : 'text-gray-400'
                         }`} />
                       </motion.div>
@@ -161,27 +161,27 @@ export default function CustodySection() {
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                         className="overflow-hidden"
                       >
-                        <div className="px-6 md:px-8 pb-6 md:pb-8 pt-2 relative z-10">
+                        <div className="px-4 sm:px-6 md:px-8 pb-4 sm:pb-6 md:pb-8 pt-2 relative z-10">
                           {/* Divider */}
-                          <div className="mb-8">
+                          <div className="mb-4 sm:mb-6 md:mb-8">
                             <div className={`h-0.5 bg-gradient-to-r ${option.gradient} opacity-30`}></div>
                           </div>
 
                           {/* Features Grid */}
-                          <div className="grid md:grid-cols-2 gap-4">
+                          <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
                             {option.features.map((feature, featureIndex) => (
                               <motion.div
                                 key={featureIndex}
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.1 + featureIndex * 0.05 }}
-                                className="flex items-start bg-white/5 rounded-xl p-4 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors duration-300"
+                                className="flex items-start bg-white/5 rounded-lg sm:rounded-xl p-3 sm:p-4 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors duration-300"
                               >
                                 <CheckCircle2 
-                                  className="w-5 h-5 mr-3 flex-shrink-0 mt-0.5" 
+                                  className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 flex-shrink-0 mt-0.5" 
                                   style={{ color: option.accentColor }}
                                 />
-                                <span className="text-gray-200 text-base">{feature}</span>
+                                <span className="text-gray-200 text-sm sm:text-base">{feature}</span>
                               </motion.div>
                             ))}
                           </div>

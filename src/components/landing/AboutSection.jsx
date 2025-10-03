@@ -77,7 +77,7 @@ export default function AboutSection() {
             </p>
 
             {/* Problem Points */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-3xl mx-auto">
               {[
                 { icon: AlertCircle, text: 'Smart contract audits cost $50k+' },
                 { icon: Clock, text: 'Waste of protocol integration' },
@@ -86,13 +86,13 @@ export default function AboutSection() {
               ].map((item, index) => (
                 <motion.div
                   key={index}
-                  className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-red-500/20"
+                  className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-white/5 rounded-lg sm:rounded-xl border border-red-500/20"
                   initial={{ opacity: 0, x: -20 }}
                   animate={isProblemInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                 >
-                  <item.icon className="w-6 h-6 text-red-400 flex-shrink-0" />
-                  <span className="text-sm md:text-base text-gray-300 text-left">{item.text}</span>
+                  <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-red-400 flex-shrink-0" />
+                  <span className="text-xs sm:text-sm md:text-base text-gray-300 text-left">{item.text}</span>
                 </motion.div>
               ))}
             </div>
@@ -134,7 +134,7 @@ export default function AboutSection() {
             </p>
 
             {/* Solution Points */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-3xl mx-auto">
               {[
                 { icon: TrendingUp, text: 'Reduced time to market' },
                 { icon: CheckCircle, text: 'Multi-chain & Multi-protocol' },
@@ -143,13 +143,13 @@ export default function AboutSection() {
               ].map((item, index) => (
                 <motion.div
                   key={index}
-                  className="flex items-center gap-4 p-4 bg-white/5 rounded-xl border border-green-500/20"
+                  className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-white/5 rounded-lg sm:rounded-xl border border-green-500/20"
                   initial={{ opacity: 0, x: -20 }}
                   animate={isSolutionInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                   transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                 >
-                  <item.icon className="w-6 h-6 text-green-400 flex-shrink-0" />
-                  <span className="text-sm md:text-base text-gray-300 text-left">{item.text}</span>
+                  <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-green-400 flex-shrink-0" />
+                  <span className="text-xs sm:text-sm md:text-base text-gray-300 text-left">{item.text}</span>
                 </motion.div>
               ))}
             </div>

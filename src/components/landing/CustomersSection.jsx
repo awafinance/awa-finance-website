@@ -85,7 +85,7 @@ export default function CustomersSection() {
         </motion.div>
 
         {/* Carousel */}
-        <div ref={ref} className="relative h-[650px] md:h-[600px] lg:h-[580px] flex items-center justify-center">
+        <div ref={ref} className="relative h-[700px] sm:h-[650px] md:h-[600px] lg:h-[580px] flex items-center justify-center">
           <AnimatePresence initial={false}>
             {segments.map((segment, index) => {
               const position = getPosition(index);
@@ -94,22 +94,22 @@ export default function CustomersSection() {
               const variants = {
                 center: {
                   x: '-50%',
-                  scale: 1.1,
+                  scale: window.innerWidth < 640 ? 1 : 1.1, // Reduce scale on mobile
                   opacity: 1,
                   zIndex: 3,
                   filter: 'blur(0px)'
                 },
                 left: {
-                  x: '-135%',
-                  scale: 0.8,
-                  opacity: 0.4,
+                  x: window.innerWidth < 640 ? '-150%' : '-135%', // Move further on mobile to hide
+                  scale: window.innerWidth < 640 ? 0.7 : 0.8,
+                  opacity: window.innerWidth < 640 ? 0 : 0.4, // Hide on mobile
                   zIndex: 1,
                   filter: 'blur(0.5px)'
                 },
                 right: {
-                  x: '35%',
-                  scale: 0.8,
-                  opacity: 0.4,
+                  x: window.innerWidth < 640 ? '50%' : '35%', // Move further on mobile to hide
+                  scale: window.innerWidth < 640 ? 0.7 : 0.8,
+                  opacity: window.innerWidth < 640 ? 0 : 0.4, // Hide on mobile
                   zIndex: 1,
                   filter: 'blur(0.5px)'
                 }
@@ -118,7 +118,7 @@ export default function CustomersSection() {
               return (
                 <motion.div
                   key={index}
-                  className="absolute top-0 left-1/2 w-full max-w-lg px-4"
+                  className="absolute top-0 left-1/2 w-full max-w-lg px-2 sm:px-4"
                   variants={variants}
                   animate={position}
                   initial="center"
@@ -129,23 +129,23 @@ export default function CustomersSection() {
                     damping: 25
                   }}
                 >
-                  <div className={`relative overflow-hidden rounded-2xl ${position === 'center' ? 'bg-[#222222] border-white/30' : 'bg-[#1a1a1a] border-white/10'} border p-8 md:p-10 transition-all duration-500`}>
+                  <div className={`relative overflow-hidden rounded-2xl ${position === 'center' ? 'bg-[#222222] border-white/30' : 'bg-[#1a1a1a] border-white/10'} border p-6 sm:p-8 md:p-10 transition-all duration-500`}>
                     {/* Icon - With Accent Color */}
                     <motion.div
-                      className="relative w-16 h-16 rounded-xl bg-[#ff6900]/10 border border-[#ff6900]/30 flex items-center justify-center mb-6"
+                      className="relative w-12 h-12 sm:w-16 sm:h-16 rounded-xl bg-[#ff6900]/10 border border-[#ff6900]/30 flex items-center justify-center mb-4 sm:mb-6"
                       animate={position === 'center' ? { scale: [1, 1.02, 1] } : {}}
                       transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                     >
-                      <segment.icon className="w-8 h-8 text-[#ff6900]" />
+                      <segment.icon className="w-6 h-6 sm:w-8 sm:h-8 text-[#ff6900]" />
                     </motion.div>
 
                     {/* Title - With Accent Color */}
-                    <h3 className="relative text-2xl md:text-3xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-4">
+                    <h3 className="relative text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-3 sm:mb-4">
                       {segment.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="relative text-gray-400 text-base md:text-lg mb-8 leading-relaxed">
+                    <p className="relative text-gray-400 text-sm sm:text-base md:text-lg mb-6 sm:mb-8 leading-relaxed">
                       {segment.description}
                     </p>
 
@@ -171,23 +171,23 @@ export default function CustomersSection() {
           </AnimatePresence>
 
           {/* Navigation Arrows - Minimal Design */}
-          <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2 flex justify-between items-center px-0 lg:px-4 z-10 pointer-events-none">
+          <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2 flex justify-between items-center px-2 sm:px-0 lg:px-4 z-10 pointer-events-none">
             <motion.button
               onClick={handlePrevious}
-              className="pointer-events-auto w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 flex items-center justify-center backdrop-blur-sm transition-all duration-200"
+              className="pointer-events-auto w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 flex items-center justify-center backdrop-blur-sm transition-all duration-200"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <ChevronLeft className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
+              <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
             </motion.button>
 
             <motion.button
               onClick={handleNext}
-              className="pointer-events-auto w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 flex items-center justify-center backdrop-blur-sm transition-all duration-200"
+              className="pointer-events-auto w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 flex items-center justify-center backdrop-blur-sm transition-all duration-200"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <ChevronRight className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
+              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
             </motion.button>
           </div>
 

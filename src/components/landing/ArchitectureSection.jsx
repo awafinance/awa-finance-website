@@ -109,18 +109,18 @@ export default function ArchitectureSection() {
               <div className="text-center">
                 
                 {/* 3 Subdivisions: API, SDK, Widget */}
-                <div className="grid grid-cols-3 gap-4 md:gap-6 max-w-2xl mx-auto">
+                <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6 max-w-2xl mx-auto">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                     transition={{ duration: 0.6, delay: 0.5 }}
                     className="relative group"
                   >
-                    <div className="bg-gradient-to-br from-gray-700/50 to-gray-800/50 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-[#ff6900]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#ff6900]/10">
-                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#ff6900] to-[#ef8123] flex items-center justify-center mb-4 mx-auto">
-                        <Code2 className="w-7 h-7 text-white" />
+                    <div className="bg-gradient-to-br from-gray-700/50 to-gray-800/50 backdrop-blur-md border border-white/10 rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 hover:border-[#ff6900]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#ff6900]/10">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg sm:rounded-xl bg-gradient-to-br from-[#ff6900] to-[#ef8123] flex items-center justify-center mb-2 sm:mb-3 md:mb-4 mx-auto">
+                        <Code2 className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
                       </div>
-                      <h4 className="text-white font-semibold text-lg text-center">API</h4>
+                      <h4 className="text-white font-semibold text-sm sm:text-base md:text-lg text-center">API</h4>
                     </div>
                   </motion.div>
                   
@@ -130,11 +130,11 @@ export default function ArchitectureSection() {
                     transition={{ duration: 0.6, delay: 0.6 }}
                     className="relative group"
                   >
-                    <div className="bg-gradient-to-br from-gray-700/50 to-gray-800/50 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-[#ff6900]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#ff6900]/10">
-                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#ff6900] to-[#ef8123] flex items-center justify-center mb-4 mx-auto">
-                        <Package className="w-7 h-7 text-white" />
+                    <div className="bg-gradient-to-br from-gray-700/50 to-gray-800/50 backdrop-blur-md border border-white/10 rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 hover:border-[#ff6900]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#ff6900]/10">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg sm:rounded-xl bg-gradient-to-br from-[#ff6900] to-[#ef8123] flex items-center justify-center mb-2 sm:mb-3 md:mb-4 mx-auto">
+                        <Package className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
                       </div>
-                      <h4 className="text-white font-semibold text-lg text-center">SDK</h4>
+                      <h4 className="text-white font-semibold text-sm sm:text-base md:text-lg text-center">SDK</h4>
                     </div>
                   </motion.div>
                   
@@ -144,11 +144,11 @@ export default function ArchitectureSection() {
                     transition={{ duration: 0.6, delay: 0.7 }}
                     className="relative group"
                   >
-                    <div className="bg-gradient-to-br from-gray-700/50 to-gray-800/50 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-[#ff6900]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#ff6900]/10">
-                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#ff6900] to-[#ef8123] flex items-center justify-center mb-4 mx-auto">
-                        <Puzzle className="w-7 h-7 text-white" />
+                    <div className="bg-gradient-to-br from-gray-700/50 to-gray-800/50 backdrop-blur-md border border-white/10 rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-6 hover:border-[#ff6900]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#ff6900]/10">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg sm:rounded-xl bg-gradient-to-br from-[#ff6900] to-[#ef8123] flex items-center justify-center mb-2 sm:mb-3 md:mb-4 mx-auto">
+                        <Puzzle className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
                       </div>
-                      <h4 className="text-white font-semibold text-lg text-center">Widget</h4>
+                      <h4 className="text-white font-semibold text-sm sm:text-base md:text-lg text-center">Widget</h4>
                     </div>
                   </motion.div>
                 </div>
@@ -194,7 +194,7 @@ export default function ArchitectureSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.8, delay: 1.0 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-8"
+            className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-8"
           >
             {services.map((service, index) => (
               <motion.div
@@ -204,11 +204,11 @@ export default function ArchitectureSection() {
                 transition={{ duration: 0.6, delay: 1.1 + index * 0.1 }}
                 className="relative group"
               >
-                <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-[#ff6900]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#ff6900]/10">
-                  <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-4 mx-auto`}>
-                    <service.icon className="w-7 h-7 text-white" />
+                <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-md border border-white/10 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 hover:border-[#ff6900]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#ff6900]/10">
+                  <div className={`w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-lg sm:rounded-xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-3 sm:mb-4 mx-auto`}>
+                    <service.icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white" />
                   </div>
-                  <h3 className="text-white font-semibold text-lg text-center">{service.title}</h3>
+                  <h3 className="text-white font-semibold text-sm sm:text-base md:text-lg text-center">{service.title}</h3>
                 </div>
               </motion.div>
             ))}
@@ -245,8 +245,8 @@ export default function ArchitectureSection() {
             className="relative"
           >
             {/* Chains Container */}
-            <div className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm border border-white/5 rounded-3xl p-8">
-              <div className="flex flex-wrap justify-center gap-4 mb-6">
+            <div className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm border border-white/5 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8">
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-4 sm:mb-6">
                 {chains.map((chain, index) => (
                   <motion.div
                     key={chain.name}
@@ -256,14 +256,14 @@ export default function ArchitectureSection() {
                     className="group relative"
                   >
                     <div
-                      className="w-12 h-12 rounded-full flex items-center justify-center border-2 transition-all duration-300 hover:scale-110 hover:shadow-lg"
+                      className="w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 rounded-full flex items-center justify-center border-2 transition-all duration-300 hover:scale-110 hover:shadow-lg"
                       style={{
                         backgroundColor: `${chain.color}20`,
                         borderColor: chain.color
                       }}
                     >
                       <span
-                        className="text-xl font-bold"
+                        className="text-base sm:text-lg md:text-xl font-bold"
                         style={{ color: chain.color }}
                       >
                         {chain.logo}
@@ -284,7 +284,7 @@ export default function ArchitectureSection() {
               <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent mb-6" />
 
               {/* Protocols Container */}
-              <div className="flex flex-wrap justify-center gap-3">
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
                 {protocols.map((protocol, index) => (
                   <motion.div
                     key={protocol.name}
@@ -292,8 +292,8 @@ export default function ArchitectureSection() {
                     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
                     transition={{ duration: 0.4, delay: 1.8 + index * 0.05 }}
                   >
-                    <div className="px-4 py-2 bg-gradient-to-br from-gray-700/30 to-gray-800/30 border border-white/10 rounded-full hover:border-[#ff6900]/50 transition-all duration-300 hover:shadow-lg hover:shadow-[#ff6900]/10">
-                      <span className="text-gray-300 text-sm font-medium">{protocol.name}</span>
+                    <div className="px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-br from-gray-700/30 to-gray-800/30 border border-white/10 rounded-full hover:border-[#ff6900]/50 transition-all duration-300 hover:shadow-lg hover:shadow-[#ff6900]/10">
+                      <span className="text-gray-300 text-xs sm:text-sm font-medium">{protocol.name}</span>
                     </div>
                   </motion.div>
                 ))}

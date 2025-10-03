@@ -28,21 +28,21 @@ export default function PartnerEcosystem() {
   return (
     <section 
         ref={ref}
-        className="px-6 lg:px-8 relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
+        className="px-6 lg:px-8 relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-20"
     >
         {/* Centered Text */}
         <motion.div
-          className="text-center z-10"
+          className="text-center z-10 relative"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
             <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
               Connected by Awa
             </span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-xl mx-auto leading-relaxed px-4">
             Connect to all relevant protocols with a single API, no hassle, just simple integration.
           </p>
         </motion.div>
@@ -52,7 +52,8 @@ export default function PartnerEcosystem() {
           {partners.map((partner, index) => {
             // Create a circular arrangement around the center
             const angle = (index / partners.length) * 2 * Math.PI;
-            const baseRadius = 250; // Base distance from center in pixels
+            // Responsive base radius - smaller on mobile
+            const baseRadius = typeof window !== 'undefined' && window.innerWidth < 768 ? 140 : 250;
             
             // INVERTED: Use scroll progress to animate convergence toward center
             const x = useTransform(scrollYProgress, [0, 0.5, 1], [
@@ -67,13 +68,18 @@ export default function PartnerEcosystem() {
               Math.sin(angle) * baseRadius
             ]);
 
+            // Responsive size - smaller on mobile
+            const mobileSize = typeof window !== 'undefined' && window.innerWidth < 768 
+              ? Math.floor(partner.size * 0.6) 
+              : partner.size;
+
             return (
               <motion.div
                 key={partner.name}
-                className="absolute top-1/2 left-1/2 flex items-center justify-center rounded-full shadow-lg backdrop-blur-sm bg-white/10 border border-white/20 p-3"
+                className="absolute top-1/2 left-1/2 flex items-center justify-center rounded-full shadow-lg backdrop-blur-sm bg-white/10 border border-white/20 p-2 sm:p-3"
                 style={{
-                  width: partner.size,
-                  height: partner.size,
+                  width: mobileSize,
+                  height: mobileSize,
                   x: x,
                   y: y,
                   translateX: '-50%',

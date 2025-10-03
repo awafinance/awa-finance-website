@@ -63,7 +63,7 @@ export default function UseCasesSection() {
         {/* Use Cases Grid */}
         <motion.div
           ref={ref}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.8, staggerChildren: 0.2 }}
@@ -76,19 +76,19 @@ export default function UseCasesSection() {
               transition={{ duration: 0.8, delay: index * 0.15 }}
             >
               <Card className="bg-white/10 backdrop-blur-md border border-white/20 hover:border-[#ff6900]/70 transition-all duration-500 group hover:scale-105 h-full">
-                <CardContent className="p-8">
+                <CardContent className="p-6 sm:p-8">
                   {/* Icon */}
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${useCase.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <useCase.icon className="w-8 h-8 text-white" />
+                  <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-gradient-to-r ${useCase.gradient} flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <useCase.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-[#ff6900] transition-colors duration-300">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4 group-hover:text-[#ff6900] transition-colors duration-300">
                     {useCase.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-400 text-lg leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+                  <p className="text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
                     {useCase.description}
                   </p>
                 </CardContent>

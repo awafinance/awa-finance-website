@@ -77,8 +77,8 @@ export default function HeroSection() {
           </Button>
         </motion.div>
 
-        {/* Floating Elements */}
-        <div className="absolute inset-0 pointer-events-none">
+        {/* Floating Elements - Hidden on mobile for performance */}
+        <div className="absolute inset-0 pointer-events-none hidden sm:block">
           <motion.div
             className="absolute top-1/4 left-10 w-2 h-2 bg-[#ef8123] rounded-full"
             animate={{
