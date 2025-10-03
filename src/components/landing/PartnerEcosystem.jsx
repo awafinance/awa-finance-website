@@ -28,7 +28,7 @@ export default function PartnerEcosystem() {
   return (
     <section 
         ref={ref}
-        className="py-24 px-6 lg:px-8 relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
+        className="px-6 lg:px-8 relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
     >
         {/* Centered Text */}
         <motion.div

@@ -4,14 +4,14 @@ import { motion } from 'framer-motion';
 
 export default function Footer() {
   const footerLinks = {
-    "Products": ["Multi-Currency Accounts", "Remittances", "Earn Yield", "Tokenized Stocks"],
+    "Platform": ["Multi-Currency Accounts", "Remittances", "Earn Yield", "Tokenized Stocks"],
     "Solutions": ["Wallets & Exchanges", "Fintechs", "Financial Institutions", "Enterprise"],
     "Resources": ["Documentation", "API Reference", "Support", "Community"],
     "Company": ["About", "Careers", "Blog", "Contact"]
   };
 
   return (
-    <footer className="bg-black/50 backdrop-blur-sm border-t border-white/10 py-16 px-6 lg:px-8">
+    <footer className="bg-transparent mt-32 lg:mt-40 py-16 px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
           {/* Logo and Description */}

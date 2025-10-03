@@ -7,7 +7,28 @@ import { Menu, X } from 'lucide-react';
 export default function NavigationHeader({ isScrolled }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const navItems = ["Products", "Solutions", "Customers", "Resources", "Contact"];
+  const navItems = [
+    { label: "About Us", href: "about" },
+    { label: "Platform", href: "architecture" },
+    { label: "Use Cases", href: "use-cases" },
+    { label: "Customers", href: "customers" },
+    { label: "Integration", href: "integration" }
+  ];
+
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    const element = document.getElementById(href);
+    if (element) {
+      const headerOffset = 80; // Height of the fixed header
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   return (
     <motion.header
@@ -24,9 +45,13 @@ export default function NavigationHeader({ isScrolled }) {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <motion.div
-            className="flex items-center"
+            className="flex items-center cursor-pointer"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 30 }}
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
           >
             <img 
               src="/images/Awa-logo-no-background.png" 
@@ -39,13 +64,14 @@ export default function NavigationHeader({ isScrolled }) {
           <nav className="hidden lg:flex items-center justify-center space-x-8 flex-1">
             {navItems.map((item) => (
               <motion.a
-                key={item}
-                href={`#${item.toLowerCase()}`}
+                key={item.href}
+                href={`#${item.href}`}
+                onClick={(e) => handleNavClick(e, item.href)}
                 className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
                 whileHover={{ y: -2 }}
                 transition={{ type: "spring", stiffness: 400, damping: 30 }}
               >
-                {item}
+                {item.label}
               </motion.a>
             ))}
           </nav>
@@ -80,12 +106,15 @@ export default function NavigationHeader({ isScrolled }) {
             <div className="px-6 py-4 space-y-4">
               {navItems.map((item) => (
                 <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
+                  key={item.href}
+                  href={`#${item.href}`}
+                  onClick={(e) => {
+                    handleNavClick(e, item.href);
+                    setMobileMenuOpen(false);
+                  }}
                   className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium py-2"
-                  onClick={() => setMobileMenuOpen(false)}
                 >
-                  {item}
+                  {item.label}
                 </a>
               ))}
               <Button
