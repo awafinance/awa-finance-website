@@ -6,19 +6,19 @@ import { ArrowRight, Play } from 'lucide-react';
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 lg:px-8">
+    <section className="relative min-h-screen flex items-center justify-center px-6 lg:px-8 pt-24 sm:pt-0">
       <div className="max-w-6xl mx-auto text-center">
         {/* AWA Logo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="mb-12"
+          className="mb-8 sm:mb-12"
         >
           <img 
             src="/images/Awa-logo-no-background.png" 
             alt="AWA Finance Logo" 
-            className="mx-auto h-32 md:h-40 lg:h-48 w-auto"
+            className="mx-auto h-24 sm:h-32 md:h-40 lg:h-48 w-auto"
           />
         </motion.div>
 
@@ -27,9 +27,9 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
             <span className="bg-gradient-to-r from-white via-[#e5dcd6] to-[#b38a94] bg-clip-text text-transparent">
-              Your Gateway to
+              Your Gateway{" "}to
             </span>
             <br />
             <span className="bg-gradient-to-r from-[#ff6900] via-[#ef8123] to-[#bf6037] bg-clip-text text-transparent">
