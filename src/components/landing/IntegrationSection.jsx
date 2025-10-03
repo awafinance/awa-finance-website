@@ -33,7 +33,7 @@ try {
   };
 
   return (
-    <section id="integration" className="relative px-6 lg:px-8 py-20 lg:py-32">
+    <section id="integration" className="relative px-6 lg:px-8 pt-20 lg:pt-32 pb-32 lg:pb-48">
       {/* Subtle orange glow from bottom right extending upward */}
       <div className="absolute bottom-0 right-0 left-0 h-[200vh] bg-gradient-to-tl from-[#ff9955]/20 via-transparent to-transparent pointer-events-none" />
       
