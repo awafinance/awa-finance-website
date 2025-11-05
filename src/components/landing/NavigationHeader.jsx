@@ -76,13 +76,20 @@ export default function NavigationHeader({ isScrolled }) {
             ))}
           </nav>
 
-          {/* View Docs Button - Right Side */}
-          <div className="hidden lg:flex">
+          {/* Action Buttons - Right Side */}
+          <div className="hidden lg:flex gap-3">
             <Button
-              className="bg-gradient-to-r from-[#ff6900] to-[#ef8123] hover:from-[#ef8123] hover:to-[#ff6900] text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              variant="outline"
+              className="border-2 border-[#ff6900] text-[#ff6900] hover:bg-[#ff6900] hover:text-white px-6 py-2 rounded-full font-semibold transition-all duration-300"
               onClick={() => window.open('https://docs.awafinance.com', '_blank')}
             >
               View Docs
+            </Button>
+            <Button
+              className="bg-gradient-to-r from-[#ff6900] to-[#ef8123] hover:from-[#ef8123] hover:to-[#ff6900] text-white px-6 py-2 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              onClick={() => window.open('https://app.awafinance.com/signin', '_blank')}
+            >
+              Sign In
             </Button>
           </div>
 
@@ -118,10 +125,17 @@ export default function NavigationHeader({ isScrolled }) {
                 </a>
               ))}
               <Button
-                className="w-full bg-gradient-to-r from-[#ff6900] to-[#ef8123] hover:from-[#ef8123] hover:to-[#ff6900] text-white py-3 rounded-full font-semibold mt-4"
+                variant="outline"
+                className="w-full border-2 border-[#ff6900] text-[#ff6900] hover:bg-[#ff6900] hover:text-white py-3 rounded-full font-semibold mt-4"
                 onClick={() => window.open('https://docs.awafinance.com', '_blank')}
               >
                 View Docs
+              </Button>
+              <Button
+                className="w-full bg-gradient-to-r from-[#ff6900] to-[#ef8123] hover:from-[#ef8123] hover:to-[#ff6900] text-white py-3 rounded-full font-semibold"
+                onClick={() => window.open('https://app.awafinance.com/signin', '_blank')}
+              >
+                Sign In
               </Button>
             </div>
           </motion.div>

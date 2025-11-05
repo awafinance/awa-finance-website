@@ -68,12 +68,13 @@ export default function HeroSection() {
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
           
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             variant="outline"
             className="border-2 border-[#ff6900] text-[#ff6900] hover:bg-[#ff6900] hover:text-white hover:border-[#ff6900] px-8 py-4 rounded-full font-semibold backdrop-blur-sm transition-all duration-300"
+            onClick={() => window.open('https://app.awafinance.com/signup', '_blank')}
           >
-            Get in touch
+            Get Started
           </Button>
         </motion.div>
 
