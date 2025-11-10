@@ -62,7 +62,7 @@ export default function HeroSection() {
           <Button
             size="lg"
             className="bg-gradient-to-r from-[#ff6900] to-[#ef8123] hover:from-[#ef8123] hover:to-[#ff6900] text-white px-8 py-4 rounded-full font-semibold shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 transform hover:scale-105"
-            onClick={() => window.open('https://docs.awafinance.com', '_blank')}
+            onClick={() => window.open('https://docs.awafinance.com/pages/getting-started/intro', '_blank')}
           >
             View Docs
             <ArrowRight className="ml-2 w-5 h-5" />

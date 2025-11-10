@@ -81,7 +81,7 @@ export default function NavigationHeader({ isScrolled }) {
             <Button
               variant="outline"
               className="border-2 border-[#ff6900] text-[#ff6900] hover:bg-[#ff6900] hover:text-white px-6 py-2 rounded-full font-semibold transition-all duration-300"
-              onClick={() => window.open('https://docs.awafinance.com', '_blank')}
+              onClick={() => window.open('https://docs.awafinance.com/pages/getting-started/intro', '_blank')}
             >
               View Docs
             </Button>
@@ -127,7 +127,7 @@ export default function NavigationHeader({ isScrolled }) {
               <Button
                 variant="outline"
                 className="w-full border-2 border-[#ff6900] text-[#ff6900] hover:bg-[#ff6900] hover:text-white py-3 rounded-full font-semibold mt-4"
-                onClick={() => window.open('https://docs.awafinance.com', '_blank')}
+                onClick={() => window.open('https://docs.awafinance.com/pages/getting-started/intro', '_blank')}
               >
                 View Docs
               </Button>
