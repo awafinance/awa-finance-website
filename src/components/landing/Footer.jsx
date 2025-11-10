@@ -16,7 +16,7 @@ export default function Footer() {
       { name: "Financial Institutions", href: "#customers" }
     ],
     "Resources": [
-      { name: "Documentation", href: "https://docs.awafinance.com" },
+      { name: "Documentation", href: "https://docs.awafinance.com/pages/getting-started/intro" },
       { name: "API Reference", href: "https://docs.awafinance.com/api" },
       { name: "Support", href: "mailto:support@awafinance.com" },
       { name: "Community", href: "https://discord.gg/awafinance" }
