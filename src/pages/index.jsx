@@ -1,13 +1,19 @@
 import Layout from "./Layout.jsx";
 
 import Home from "./Home";
+import PrivacyPolicy from "./PrivacyPolicy";
+import TermsOfService from "./TermsOfService";
+import CookiePolicy from "./CookiePolicy";
 
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 
 const PAGES = {
-    
+
     Home: Home,
-    
+    PrivacyPolicy: PrivacyPolicy,
+    TermsOfService: TermsOfService,
+    CookiePolicy: CookiePolicy,
+
 }
 
 function _getCurrentPage(url) {
@@ -30,13 +36,16 @@ function PagesContent() {
     
     return (
         <Layout currentPageName={currentPage}>
-            <Routes>            
-                
+            <Routes>
+
                     <Route path="/" element={<Home />} />
-                
-                
+
+
                 <Route path="/Home" element={<Home />} />
-                
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="/terms-of-service" element={<TermsOfService />} />
+                <Route path="/cookie-policy" element={<CookiePolicy />} />
+
             </Routes>
         </Layout>
     );
