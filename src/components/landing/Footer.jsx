@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   const footerLinks = {
@@ -105,9 +106,9 @@ export default function Footer() {
             © 2025 AWA Finance. All rights reserved.
           </div>
           <div className="flex space-x-6 text-gray-400">
-            <a href="#" className="hover:text-white transition-colors duration-200">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors duration-200">Terms of Service</a>
-            <a href="#" className="hover:text-white transition-colors duration-200">Cookie Policy</a>
+            <Link to="/privacy-policy" className="hover:text-white transition-colors duration-200">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="hover:text-white transition-colors duration-200">Terms of Service</Link>
+            <Link to="/cookie-policy" className="hover:text-white transition-colors duration-200">Cookie Policy</Link>
           </div>
         </motion.div>
       </div>
