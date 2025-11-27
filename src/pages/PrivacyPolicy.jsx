@@ -55,7 +55,36 @@ const PrivacyPolicy = () => {
               </ul>
 
               <h3 className="text-xl font-semibold text-purple-400 mb-3 mt-6">
-                1.2 Blockchain and Wallet Data
+                1.2 Google OAuth Data
+              </h3>
+              <p className="leading-relaxed mb-4">
+                When you sign in using Google OAuth, we collect the following information from your Google account:
+              </p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li><strong>Email address:</strong> Used as your account identifier and for communication</li>
+                <li><strong>Name:</strong> Used to personalize your experience</li>
+                <li><strong>Profile picture:</strong> Displayed in your account settings (optional)</li>
+              </ul>
+              <p className="leading-relaxed mt-4 mb-2">
+                <strong className="text-white">How we use Google OAuth data:</strong>
+              </p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>To create and authenticate your AWA Finance account</li>
+                <li>To send you important service notifications and updates</li>
+                <li>To provide customer support</li>
+              </ul>
+              <p className="leading-relaxed mt-4 mb-2">
+                <strong className="text-white">How we share Google OAuth data:</strong>
+              </p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>We do not sell your Google account data to third parties</li>
+                <li>We do not share your Google account data with advertising networks</li>
+                <li>We may share your email with service providers who assist in operating our platform (e.g., email delivery services) under strict confidentiality agreements</li>
+                <li>We may disclose your information if required by law or to protect our legal rights</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold text-purple-400 mb-3 mt-6">
+                1.3 Blockchain and Wallet Data
               </h3>
               <p className="leading-relaxed mb-4">
                 As a DeFi API platform, we process blockchain-related data:
@@ -72,7 +101,7 @@ const PrivacyPolicy = () => {
               </p>
 
               <h3 className="text-xl font-semibold text-purple-400 mb-3 mt-6">
-                1.3 Custodial vs. Non-Custodial Data Differences
+                1.4 Custodial vs. Non-Custodial Data Differences
               </h3>
               <p className="leading-relaxed mb-4">
                 The data we collect and control varies based on your service model:
@@ -103,7 +132,7 @@ const PrivacyPolicy = () => {
               </div>
 
               <h3 className="text-xl font-semibold text-purple-400 mb-3 mt-6">
-                1.4 Technical and Usage Data
+                1.5 Technical and Usage Data
               </h3>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>API usage statistics and logs</li>

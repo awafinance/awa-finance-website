@@ -405,7 +405,7 @@ const TermsOfService = () => {
                 14. Governing Law
               </h2>
               <p className="leading-relaxed">
-                These Terms are governed by the laws of [Jurisdiction], without regard to conflict of law principles. Any legal action must be brought in the courts of [Jurisdiction].
+                These Terms are governed by the laws of the State of Delaware, United States, without regard to conflict of law principles. Any legal action must be brought in the courts of Delaware.
               </p>
             </section>
 

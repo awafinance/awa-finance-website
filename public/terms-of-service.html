@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AWA Finance Terms of Service - The terms and conditions governing use of our DeFi API platform and services.">
+  <meta name="robots" content="index, follow">
+  <title>Terms of Service - AWA Finance</title>
+  <link rel="icon" type="image/png" href="/awa-dark-original.png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(to bottom, #210921, #000000, #4f185a);
+      min-height: 100vh;
+      color: #d1d5db;
+      line-height: 1.6;
+    }
+    a {
+      color: #c084fc;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #d8b4fe;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+      padding: 1rem 2rem;
+      z-index: 100;
+    }
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+    .logo img {
+      height: 40px;
+      width: auto;
+    }
+    nav a {
+      color: #9ca3af;
+      text-decoration: none;
+      margin-left: 1.5rem;
+    }
+    nav a:hover {
+      color: white;
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+    .content-box {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 1rem;
+      padding: 2rem;
+    }
+    @media (min-width: 768px) {
+      .content-box {
+        padding: 3rem;
+      }
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+    .last-updated {
+      color: #9ca3af;
+      margin-bottom: 2rem;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #c084fc;
+      margin-bottom: 0.75rem;
+      margin-top: 1.5rem;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    ul {
+      list-style: disc;
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    .highlight-box {
+      background: rgba(88, 28, 135, 0.3);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+    .highlight-box h4 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+    .highlight-box ul {
+      font-size: 0.875rem;
+    }
+    .warning {
+      color: rgba(250, 204, 21, 0.8);
+    }
+    .uppercase {
+      text-transform: uppercase;
+    }
+    .contact-box {
+      background: rgba(88, 28, 135, 0.3);
+      border: 1px solid rgba(139, 92, 246, 0.3);
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+    }
+    .contact-box p {
+      margin-bottom: 0.5rem;
+    }
+    .contact-box strong {
+      color: white;
+    }
+    .acknowledgment {
+      border-top: 1px solid rgba(139, 92, 246, 0.3);
+      padding-top: 2rem;
+      margin-top: 2rem;
+    }
+    footer {
+      background: transparent;
+      padding: 3rem 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 3rem;
+    }
+    .footer-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+    @media (min-width: 768px) {
+      .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .footer-links a {
+      color: #9ca3af;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      color: white;
+    }
+    .copyright {
+      color: #9ca3af;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <a href="/" class="logo">
+        <img src="/images/Awa-logo-no-background.png" alt="AWA Finance Logo">
+      </a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="https://docs.awafinance.com">Docs</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="content-box">
+      <h1>Terms of Service</h1>
+      <p class="last-updated">Last Updated: November 12, 2025</p>
+
+      <div class="content">
+        <section>
+          <p>These Terms of Service ("Terms") govern your access to and use of AWA Finance's DeFi API platform and services ("Services"). By accessing or using our Services, you agree to be bound by these Terms.</p>
+          <p class="warning"><strong>IMPORTANT:</strong> Please read these Terms carefully. They contain important information about your legal rights, remedies, and obligations, including mandatory arbitration and class action waiver provisions.</p>
+        </section>
+
+        <section>
+          <h2>1. Acceptance of Terms</h2>
+          <p>By creating an account, accessing our API, or using our Services, you acknowledge that you have read, understood, and agree to be bound by these Terms and our Privacy Policy. If you do not agree, you must not use our Services.</p>
+          <p>These Terms constitute a legally binding agreement between you ("you," "your," or "User") and AWA Finance ("we," "our," or "us").</p>
+        </section>
+
+        <section>
+          <h2>2. Service Description</h2>
+          <p>AWA Finance provides a unified API platform for accessing decentralized finance (DeFi) protocols and blockchain infrastructure. Our Services enable businesses to:</p>
+          <ul>
+            <li>Generate yield through DeFi protocols</li>
+            <li>Access lending and borrowing services</li>
+            <li>Execute multi-chain token swaps</li>
+            <li>Interact with tokenized assets (including RWAs)</li>
+            <li>Process cross-border payments</li>
+            <li>Integrate blockchain functionality into applications</li>
+          </ul>
+          <p>We offer both custodial (Enterprise Managed Model) and non-custodial (ERC-4337 Smart Accounts) frameworks to meet different business needs.</p>
+        </section>
+
+        <section>
+          <h2>3. Eligibility</h2>
+          <p>To use our Services, you must:</p>
+          <ul>
+            <li>Be at least 18 years of age</li>
+            <li>Have the legal capacity to enter into binding contracts</li>
+            <li>Not be located in a jurisdiction where our Services are prohibited</li>
+            <li>Comply with all applicable laws and regulations</li>
+            <li>Complete our KYC/AML verification process</li>
+            <li>Represent a legitimate business entity (for business accounts)</li>
+          </ul>
+          <p>We reserve the right to refuse service to anyone for any reason at any time.</p>
+        </section>
+
+        <section>
+          <h2>4. Account Registration and Security</h2>
+
+          <h3>4.1 Account Creation</h3>
+          <p>You must provide accurate, complete, and current information during registration. You are responsible for maintaining the confidentiality of your account credentials and for all activities under your account.</p>
+
+          <h3>4.2 API Keys and Authentication</h3>
+          <p>API keys and authentication tokens are sensitive credentials. You must:</p>
+          <ul>
+            <li>Keep API keys confidential and secure</li>
+            <li>Never share API keys publicly or in client-side code</li>
+            <li>Rotate API keys regularly</li>
+            <li>Immediately revoke compromised keys</li>
+            <li>Use appropriate access controls and permissions</li>
+          </ul>
+
+          <h3>4.3 Account Security</h3>
+          <p>You must immediately notify us of any unauthorized access or security breaches. We are not liable for losses resulting from unauthorized use of your account unless caused by our negligence.</p>
+        </section>
+
+        <section>
+          <h2>5. Custodial vs. Non-Custodial Services</h2>
+
+          <h3>5.1 Custodial Services (Enterprise Managed Model)</h3>
+          <div class="highlight-box">
+            <p>When you use our custodial services:</p>
+            <ul>
+              <li>We maintain custody of private keys and digital assets on your behalf</li>
+              <li>We are responsible for key management and security</li>
+              <li>You authorize us to execute transactions per your API requests</li>
+              <li>Enhanced KYC/AML compliance requirements apply</li>
+              <li>We maintain insurance coverage for custodied assets (where available)</li>
+              <li>You grant us limited power of attorney to act on your behalf</li>
+            </ul>
+          </div>
+
+          <h3>5.2 Non-Custodial Services (ERC-4337 Smart Accounts)</h3>
+          <div class="highlight-box">
+            <p>When you use our non-custodial services:</p>
+            <ul>
+              <li>You maintain full custody and control of your private keys</li>
+              <li>You are solely responsible for key security and backup</li>
+              <li>We only process transactions you explicitly sign</li>
+              <li>You bear full risk of key loss or compromise</li>
+              <li>We cannot recover lost keys or reverse transactions</li>
+              <li>You must secure your own wallet and authentication methods</li>
+            </ul>
+          </div>
+
+          <p class="warning"><strong>WARNING:</strong> Lost private keys cannot be recovered. Ensure you have secure backup procedures in place.</p>
+        </section>
+
+        <section>
+          <h2>6. Fees and Payments</h2>
+
+          <h3>6.1 Service Fees</h3>
+          <p>AWA Finance operates on a transaction-based fee model:</p>
+          <ul>
+            <li>We charge a small percentage fee on each on-chain transaction</li>
+            <li>No setup fees or monthly minimums</li>
+            <li>Fees scale with your usage volume</li>
+            <li>Custom enterprise pricing available for high-volume users</li>
+            <li>Fees are clearly displayed before transaction execution</li>
+          </ul>
+
+          <h3>6.2 Blockchain Network Fees (Gas)</h3>
+          <p>In addition to our service fees, you are responsible for:</p>
+          <ul>
+            <li>Blockchain network transaction fees (gas fees)</li>
+            <li>Smart contract execution costs</li>
+            <li>Network congestion surcharges</li>
+          </ul>
+          <p>These fees are paid directly to blockchain validators and are outside our control. We will provide fee estimates but actual costs may vary based on network conditions.</p>
+
+          <h3>6.3 Payment Terms</h3>
+          <ul>
+            <li>Fees are automatically deducted from transactions</li>
+            <li>Enterprise accounts may receive monthly invoicing</li>
+            <li>Payment must be made in cryptocurrency or fiat (as agreed)</li>
+            <li>Late payments may result in service suspension</li>
+            <li>We reserve the right to modify fees with 30 days' notice</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>7. User Obligations and Acceptable Use</h2>
+
+          <h3>7.1 Compliance</h3>
+          <p>You agree to:</p>
+          <ul>
+            <li>Comply with all applicable laws, including AML/KYC regulations</li>
+            <li>Not use our Services for illegal activities</li>
+            <li>Implement appropriate sanctions screening</li>
+            <li>Maintain accurate records for regulatory purposes</li>
+            <li>Cooperate with regulatory inquiries</li>
+          </ul>
+
+          <h3>7.2 Prohibited Activities</h3>
+          <p>You must NOT:</p>
+          <ul>
+            <li>Engage in money laundering, terrorist financing, or fraud</li>
+            <li>Process transactions from sanctioned jurisdictions or entities</li>
+            <li>Manipulate markets or engage in wash trading</li>
+            <li>Violate intellectual property rights</li>
+            <li>Attempt to hack, reverse engineer, or compromise our systems</li>
+            <li>Use our API to build competing services</li>
+            <li>Abuse rate limits or engage in denial-of-service attacks</li>
+            <li>Impersonate others or provide false information</li>
+          </ul>
+
+          <h3>7.3 Consequences</h3>
+          <p>Violation of these terms may result in immediate account suspension, termination, legal action, and reporting to authorities.</p>
+        </section>
+
+        <section>
+          <h2>8. Blockchain-Specific Disclaimers</h2>
+
+          <h3>8.1 Irreversibility of Transactions</h3>
+          <p>Blockchain transactions are <strong>irreversible</strong>. Once a transaction is confirmed, it cannot be reversed, refunded, or cancelled. We are not responsible for transactions sent to incorrect addresses or smart contracts.</p>
+
+          <h3>8.2 Network Risks</h3>
+          <p>Blockchain networks carry inherent risks:</p>
+          <ul>
+            <li>Network congestion may delay transactions</li>
+            <li>Blockchain forks may cause temporary disruptions</li>
+            <li>Smart contract bugs may result in loss of funds</li>
+            <li>51% attacks or consensus failures are theoretically possible</li>
+            <li>Regulatory changes may impact blockchain operations</li>
+          </ul>
+
+          <h3>8.3 Volatility and Financial Risk</h3>
+          <p class="warning"><strong>WARNING:</strong> Cryptocurrency and digital assets are highly volatile. Prices can fluctuate dramatically. You may lose all invested capital. We do not provide investment advice. Consult financial advisors before making investment decisions.</p>
+
+          <h3>8.4 Smart Contract Risks</h3>
+          <p>DeFi protocols use smart contracts which may contain bugs or vulnerabilities. While we conduct due diligence, we cannot guarantee the security of third-party protocols. Use at your own risk.</p>
+        </section>
+
+        <section>
+          <h2>9. Intellectual Property</h2>
+          <p>All content, features, and functionality of our Services, including but not limited to text, graphics, logos, software, and API design, are owned by AWA Finance and protected by copyright, trademark, and other intellectual property laws.</p>
+          <p>We grant you a limited, non-exclusive, non-transferable license to access and use our API for your business purposes in accordance with these Terms. You may not:</p>
+          <ul>
+            <li>Reproduce, modify, or create derivative works</li>
+            <li>Reverse engineer or decompile our software</li>
+            <li>Remove proprietary notices or labels</li>
+            <li>Use our trademarks without permission</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>10. Limitation of Liability</h2>
+          <p class="uppercase warning"><strong>TO THE MAXIMUM EXTENT PERMITTED BY LAW:</strong></p>
+          <ul>
+            <li>Our Services are provided "AS IS" without warranties of any kind</li>
+            <li>We are not liable for indirect, incidental, consequential, or punitive damages</li>
+            <li>Our total liability is limited to fees paid in the 12 months preceding the claim</li>
+            <li>We are not liable for blockchain network failures, smart contract bugs, or third-party protocol losses</li>
+            <li>We are not responsible for user error, lost keys, or unauthorized access</li>
+            <li>We do not guarantee uptime, transaction success, or specific outcomes</li>
+          </ul>
+          <p>Some jurisdictions do not allow limitation of liability, so these limitations may not apply to you.</p>
+        </section>
+
+        <section>
+          <h2>11. Indemnification</h2>
+          <p>You agree to indemnify, defend, and hold harmless AWA Finance, its affiliates, officers, directors, employees, and agents from any claims, losses, damages, liabilities, and expenses (including legal fees) arising from:</p>
+          <ul>
+            <li>Your use or misuse of our Services</li>
+            <li>Violation of these Terms</li>
+            <li>Violation of any laws or regulations</li>
+            <li>Infringement of third-party rights</li>
+            <li>Your transactions or business activities</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>12. Service Modifications and Termination</h2>
+
+          <h3>12.1 Service Changes</h3>
+          <p>We reserve the right to modify, suspend, or discontinue any aspect of our Services at any time with reasonable notice. We may also impose usage limits or restrictions.</p>
+
+          <h3>12.2 Account Termination</h3>
+          <p>We may suspend or terminate your account:</p>
+          <ul>
+            <li>For violation of these Terms</li>
+            <li>For illegal or fraudulent activity</li>
+            <li>To comply with legal requirements</li>
+            <li>For extended inactivity</li>
+            <li>At our discretion with 30 days' notice</li>
+          </ul>
+          <p>You may terminate your account at any time with 30 days' notice. Termination does not relieve you of obligations incurred before termination.</p>
+        </section>
+
+        <section>
+          <h2>13. Dispute Resolution and Arbitration</h2>
+          <p>Any disputes arising from these Terms or our Services shall be resolved through binding arbitration, except where prohibited by law. You waive the right to participate in class action lawsuits.</p>
+          <p>Arbitration shall be conducted under the rules of the American Arbitration Association (AAA). The arbitration location and governing law shall be determined based on your jurisdiction and business location.</p>
+        </section>
+
+        <section>
+          <h2>14. Governing Law</h2>
+          <p>These Terms are governed by the laws of the State of Delaware, United States, without regard to conflict of law principles. Any legal action must be brought in the courts of Delaware.</p>
+        </section>
+
+        <section>
+          <h2>15. Miscellaneous</h2>
+          <ul>
+            <li><strong>Entire Agreement:</strong> These Terms constitute the entire agreement between you and AWA Finance</li>
+            <li><strong>Severability:</strong> If any provision is found invalid, the remaining provisions remain in effect</li>
+            <li><strong>Waiver:</strong> Failure to enforce any right does not waive that right</li>
+            <li><strong>Assignment:</strong> You may not assign these Terms without our consent</li>
+            <li><strong>Force Majeure:</strong> We are not liable for delays caused by events beyond our control</li>
+            <li><strong>Relationship:</strong> Nothing creates a partnership, joint venture, or agency relationship</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>16. Changes to Terms</h2>
+          <p>We may update these Terms from time to time. Material changes will be communicated via email or platform notification at least 30 days before taking effect. Continued use after changes constitutes acceptance.</p>
+        </section>
+
+        <section>
+          <h2>17. Contact Information</h2>
+          <p>For questions about these Terms, please contact us:</p>
+          <div class="contact-box">
+            <p><strong>AWA Finance</strong></p>
+            <p>Email: <a href="mailto:legal@awafinance.com">legal@awafinance.com</a></p>
+            <p>Support: <a href="mailto:support@awafinance.com">support@awafinance.com</a></p>
+            <p>Website: <a href="https://awafinance.com">awafinance.com</a></p>
+          </div>
+        </section>
+
+        <section class="acknowledgment">
+          <p class="warning"><strong>BY USING AWA FINANCE'S SERVICES, YOU ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTOOD, AND AGREE TO BE BOUND BY THESE TERMS OF SERVICE.</strong></p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p class="copyright">&copy; 2025 AWA Finance. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-service">Terms of Service</a>
+        <a href="/cookie-policy">Cookie Policy</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
